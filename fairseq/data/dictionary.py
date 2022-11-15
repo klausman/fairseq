@@ -239,7 +239,7 @@ class Dictionary:
                 with open(PathManager.get_local_path(f), "r", encoding="utf-8") as fd:
                     self.add_from_file(fd)
             except FileNotFoundError as fnfe:
-                sys.stderr.write("WMFNLLB: Could not open file '", PathManager.get_local_path(f),"'. CWD:", os.getcwd())
+                sys.stderr.write("WMFNLLB: Could not open file '%s' CWD: '%s'" % (PathManager.get_local_path(f), os.getcwd()))
                 raise fnfe
             except UnicodeError:
                 raise Exception(
