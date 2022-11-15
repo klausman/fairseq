@@ -5,6 +5,7 @@
 # LICENSE file in the root directory of this source tree.
 
 import os
+import sys
 from collections import Counter
 from multiprocessing import Pool
 
@@ -238,6 +239,7 @@ class Dictionary:
                 with open(PathManager.get_local_path(f), "r", encoding="utf-8") as fd:
                     self.add_from_file(fd)
             except FileNotFoundError as fnfe:
+                sys.stderr.write("WMFNLLB: Could not open file '", PathManager.get_local_path(f),"'. CWD:", os.getcwd())
                 raise fnfe
             except UnicodeError:
                 raise Exception(
