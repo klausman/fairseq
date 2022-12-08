@@ -252,7 +252,7 @@ def do_setup(package_data):
                 "transformers",
                 "pyarrow",
                 "fairscale",
-                "sklearn",
+                "scikit-learn",
             ]
         },
         package_data=package_data,

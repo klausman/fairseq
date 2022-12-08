@@ -8,7 +8,7 @@ import os
 import sys
 
 import numpy as np
-from sklearn.cluster import MiniBatchKMeans
+from scikit-learn.cluster import MiniBatchKMeans
 
 import joblib
 

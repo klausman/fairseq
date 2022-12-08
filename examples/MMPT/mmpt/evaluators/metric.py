@@ -185,7 +185,7 @@ class QAMetric(Metric):
         super().__init__(config, metric_names)
 
     def compute_metrics(self, outputs, targets, **kwargs):
-        from sklearn.metrics import accuracy_score
+        from scikit-learn.metrics import accuracy_score
         return {"acc": accuracy_score(targets, outputs)}
 
     def print_computed_metrics(self, metrics):

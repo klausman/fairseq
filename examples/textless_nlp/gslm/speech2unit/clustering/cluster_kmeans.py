@@ -9,7 +9,7 @@ import os
 import time
 
 import numpy as np
-from sklearn.cluster import MiniBatchKMeans
+from scikit-learn.cluster import MiniBatchKMeans
 
 import joblib
 from examples.textless_nlp.gslm.speech2unit.pretrained.utils import (
